@@ -4,5 +4,6 @@
     "nuclei_threads": 50,
     "httpx_threads": 100,
     "httpx_rate_limit": 200,
+    "dnsx_threads": 20,
     "shodan_api_key": "APIKey"
 }

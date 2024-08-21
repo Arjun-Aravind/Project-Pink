@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+[data-testid="stAppViewContainer"] {
+    margin: 0;
+    padding: 0;
+}
+
+div.block-container.css-z5fcl4.egzxvld4 {
+    width: 100%;
+    min-width: auto;
+    max-width: initial;
+    padding: 15px 5rem 40px;
+}
+
+
+html, body, [class*="css"] {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.title {
+    font-size: 25px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+}
+
+.box {
+    border: 2px solid #ffdebd; /* Or use #21fd9c for the other box */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    margin-bottom: 20px;
+}
+
+.count {
+    font-size: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #f6f6f6;
+    font-weight: 900;
+    text-align: left;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.domains {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #f7931a;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1;
+    padding-top: 10px;
+}
+
+.subdomains {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #21fd9c;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1;
+    padding-top: 10px;
+}

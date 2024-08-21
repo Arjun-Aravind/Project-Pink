@@ -53,8 +53,7 @@ install_nuclei() {
     GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &> /dev/null
     NUCLEI_TEMPLATES_PATH=~/nuclei-templates
     git clone https://github.com/projectdiscovery/nuclei-templates $NUCLEI_TEMPLATES_PATH &> /dev/null
-    git clone https://github.com/rishikesh-j/Nuclei-Templates-Scrapped.git /tmp/nuclei-templates && find /tmp/nuclei-templates/templates -type f -exec cp --parents {} ~/nuclei-templates/extra_templates/ \; && rm -rf /tmp/nuclei-templates
- &> /dev/null
+    git clone https://github.com/rishikesh-j/Nuclei-Templates-Scrapped.git /tmp/nuclei-templates && find /tmp/nuclei-templates/templates -type f -exec cp --parents {} ~/nuclei-templates/extra_templates/ \; && rm -rf /tmp/nuclei-templates &> /dev/null
     git clone https://github.com/projectdiscovery/fuzzing-templates ~/fuzzing-templates &> /dev/null
     nuclei -update-templates -update-template-dir $NUCLEI_TEMPLATES_PATH &> /dev/null
 }
@@ -81,7 +80,7 @@ install_dnstwist() {
 install_trufflehog() {
     echo "Installing trufflehog..."
     git clone https://github.com/trufflesecurity/trufflehog.git
-    cd trufflehog; go install; cd ../;
+    cd trufflehog || exit; go install; cd ../;
     rm -r trufflehog;
 }
 
@@ -96,6 +95,8 @@ install_pydependency() {
     echo "Installing Python Dependencies..."
     pip3 install shodan &> /dev/null
     pip3 install pymongo &> /dev/null
+    pip3 install streamlit &> /dev/null
+    pip3 install pandas &> /dev/null
 }
 
 # Function to install dnsx

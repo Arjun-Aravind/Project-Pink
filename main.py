@@ -3,7 +3,6 @@ import json
 import argparse
 from datetime import datetime
 from modules import sub_enum, vuln_scan, shodan_module, phishing, postman_leaks, github_leaks, network_scan, google_dork
-from utils.mongo_utils import save_to_mongo
 from utils.logging_utils import setup_logger
 
 # Set up the logger
